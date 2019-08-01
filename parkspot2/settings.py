@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Custom modules and apps inside this project
+    'ps2auth',
+
 ]
 
 MIDDLEWARE = [
