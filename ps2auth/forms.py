@@ -8,11 +8,13 @@ from .models import PS2User
     We’ll update both the default UserCreationForm and UserChangeForm to point to our new PS2User model.
 """
 
+
 class PS2UserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm):
         model = PS2User
-        fields = ('username', 'email')
+        fields = ('display_name', 'email')
+
 
 class PS2UserChangeForm(UserChangeForm):
 

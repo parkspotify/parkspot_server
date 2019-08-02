@@ -85,6 +85,10 @@ DATABASES = {
     }
 }
 
+# AUTHENTICATION SETTINGS
+AUTH_USER_MODEL = 'ps2auth.PS2User'
+
+AUTHENTICATION_BACKENDS = ('ps2auth.backends.PS2AuthBackend', 'django.contrib.auth.backends.ModelBackend',)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
