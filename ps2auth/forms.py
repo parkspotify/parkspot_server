@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
 
 from .models import PS2User
 
@@ -13,7 +13,7 @@ class PS2UserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm):
         model = PS2User
-        fields = ('display_name', 'email')
+        fields = ('email', 'password1', 'password2')
 
 
 class PS2UserChangeForm(UserChangeForm):
@@ -21,3 +21,10 @@ class PS2UserChangeForm(UserChangeForm):
     class Meta(UserChangeForm):
         model = PS2User
         fields = UserChangeForm.Meta.fields
+
+
+class PS2UserSignIn(AuthenticationForm):
+
+    class Meta(UserCreationForm):
+        model = PS2User
+        fields = ('email', 'password1', 'password2')

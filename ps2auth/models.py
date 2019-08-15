@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth import get_user_model
 
 # Create your models here.
+from rest_framework.authtoken.models import Token
 
 
 class PS2UserManager(BaseUserManager):
@@ -62,4 +63,5 @@ class PS2User(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return self.is_staff
+
 

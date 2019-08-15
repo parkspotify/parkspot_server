@@ -23,11 +23,11 @@ class PS2AuthBackend(object):
             logging.getLogger("error_logger").error(repr(e))
             return None
 
-    def get_user(self, user_id):
+    def get_user(self, email):
         try:
-            user = PS2User.objects.get(id=user_id)
+            user = PS2User.objects.get(email=email)
             if user.is_active:
                 return user
         except PS2User.DoesNotExist:
-            logging.getLogger("error_logger").error("User with USER_ID {} does not exist.".format(user_id))
+            logging.getLogger("error_logger").error("User with USER_ID {} does not exist.".format(email))
             return None

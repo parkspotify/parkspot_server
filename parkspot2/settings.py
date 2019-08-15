@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+# Additional settings import
+from .additional_settings.rest import REST_FRAMEWORK
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +28,7 @@ SECRET_KEY = 'go7%1u5yp=xqj&__fxkmipn30@qta8(6^vwzl+nuc9-lw=mn&7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.0.242", "192.168.1.101", "0.0.0.0" , ]
 
 
 # Application definition
@@ -38,9 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 3rd party apps
+    'rest_framework',
+    'rest_framework.authtoken',
+
     # Custom modules and apps inside this project
     'ps2auth',
-
 ]
 
 MIDDLEWARE = [
@@ -87,7 +93,6 @@ DATABASES = {
 
 # AUTHENTICATION SETTINGS
 AUTH_USER_MODEL = 'ps2auth.PS2User'
-
 AUTHENTICATION_BACKENDS = ('ps2auth.backends.PS2AuthBackend', 'django.contrib.auth.backends.ModelBackend',)
 
 # Password validation
@@ -107,7 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/

@@ -1,0 +1,48 @@
+
+30.05.2019: (started at 11:30. Worked until: 16:39)
+
+    Eigentliches Datenbankmodell sieht vor, dass Parkingspot einen Foreignkey auf einen Sensor hat. Dies
+    ist unpassend, weil ein Parkingspot könnte von mehreren Sensoren gefunden sein.
+    Außerdem funktioniert es nicht, weil wir dann einen loop haben zwischen Sensor (FK auf ParkingSpot)
+    und Parkplatz (FK auf Sensor). Sollte klarifiziert werden, solange werden ich ein ManyToMany-Field pflegen.
+
+    Postgis-Installation: In order to prevent conflicts with Apple's own libtool we have prepended a "g"
+    so, you have instead: glibtool and glibtoolize.
+
+    Benutzte Ressourcen: https://realpython.com/location-based-app-with-geodjango-tutorial/
+
+31.05.2019: (started at 10:00. Worked until: 13:00)
+
+    Es war relativ kompliziert die Datenbankanbindung aufzubauen, da ich fremde Images benutze. Es wäre eine
+    interessante Aufgabe für das nächste Semester entweder ein besseres Datenbank-Backend zu integrieren
+    oder ein eigenes Docker-Image zu entwickeln.
+    Was für PostGre + PostGis spricht ist die Convenience-Integration und die Beliebtheit/Support vom
+    GeoDjango-Paket.
+
+03.06.2019: (started at 8:15. Worked until: 11:30)
+
+    Implementation of the Rest-Framework was done with some generic viewsets. The endpoints in the urls can
+    execute basic CRUD operations onto the database. For a JSON-Format a postfix has to be added:
+    http://127.0.0.1:8000/hello/?format=json
+
+05.06.2019: (started at 19:30. Worked until: 21:15)
+
+27.07.2019: (started 14:00. Worked until:
+
+    For this project we will be implementing a token-based authentication and a session auth. The token-based
+    authentication is necessary and suitable for mobile applications on mobile phones where a token can be
+    stored safely.
+
+02.08.2019 - Statusmeldung an die Developer-Gruppe:
+
+    Also hier mal mein Stand: Ich hatte bis letzte Woche schon die Datenbank aufgebaut und unser Datenmodell im Backend
+    umgesetzt. Außerdem hatte ich schon die Grundlage für die Authentication aufgebaut. Ich recherchierte, wie wir die
+    Handy-Authentication handlen und habe dafür auch schon eine Token-Authentication angefangen zu entwickeln.
+
+    Seit Montag habe ich die Authentication-Funktionen überarbeitet: Diese sind jetzt klar erkenntlich in einer
+    authentication-app (app heißt hier: ein Modul in dem Projekt, das man im besten Fall frei austauschen kann.
+    Die Teilung in apps macht bei großen Monolith-Web-Applikation die Übersicht leichter und falls die nach uns sich
+    entscheiden bestimmte Funktionalitäten zu behalten und bestimmte Funktionsklassen ganz auszuwechseln geht es
+    einfacher.) und haben ein endlich funktionierendes Authentication-Backend (davor war es nur ein Datenbankmodell und
+    ein paar Fehlermeldungen). Als nächstes werde ich eine Registrierungs-View bauen. Das sollte ich safe noch bis
+    kommenden Montag schaffen.
