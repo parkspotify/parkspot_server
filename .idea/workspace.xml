@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cff454f-c544-489b-89a9-1f22a8b918d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/developer_notes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkspot2/additional_settings/rest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ps2auth/rest_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ps2auth/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/signin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parkspot2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/parkspot2/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parkspot2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/parkspot2/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ps2auth/backends.py" beforeDir="false" afterPath="$PROJECT_DIR$/ps2auth/backends.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ps2auth/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ps2auth/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ps2auth/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ps2auth/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ps2auth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ps2auth/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,13 +18,14 @@
     <session id="-2076116504">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -58,7 +47,7 @@
         <counts>
           <entry key="developer_notes" value="72" />
           <entry key="html" value="13" />
-          <entry key="py" value="8312" />
+          <entry key="py" value="8313" />
           <entry key="txt" value="57" />
         </counts>
       </usages-collector>
@@ -66,7 +55,7 @@
         <counts>
           <entry key="HTML" value="13" />
           <entry key="PLAIN_TEXT" value="129" />
-          <entry key="Python" value="8312" />
+          <entry key="Python" value="8313" />
         </counts>
       </usages-collector>
     </session>
@@ -76,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parkspot2/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="644">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#310#319#0" expanded="true" />
               </folding>
@@ -88,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ps2auth/backends.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+            <state relative-caret-position="299">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
                 <marker date="1565710947122" expanded="true" signature="282:287" ph="..." />
               </folding>
@@ -109,11 +98,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ps2auth/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+            <state relative-caret-position="405">
+              <caret line="90" column="37" lean-forward="true" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1565893650145" expanded="true" signature="3262:3265" ph="..." />
+                <marker date="1565972326845" expanded="true" signature="3263:3266" ph="..." />
               </folding>
             </state>
           </provider>
@@ -122,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ps2auth/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+            <state relative-caret-position="253">
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -134,7 +123,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ps2auth/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1196">
+            <state relative-caret-position="1035">
               <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -146,11 +135,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ps2auth/rest_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
+            <state relative-caret-position="184">
               <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <marker date="1565813982444" expanded="true" signature="874:876" ph="..." />
               </folding>
             </state>
           </provider>
@@ -200,11 +188,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="52" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1684" />
     <option name="y" value="23" />
-    <option name="width" value="1376" />
-    <option name="height" value="877" />
+    <option name="width" value="1217" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -212,7 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,32 +207,12 @@
               <item name="parkspot2" type="b2602c69:ProjectViewProjectNode" />
               <item name="parkspot2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="parkspot2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parkspot2" type="462c0819:PsiDirectoryNode" />
-              <item name="_resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parkspot2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parkspot2" type="462c0819:PsiDirectoryNode" />
-              <item name="parkspot2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parkspot2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parkspot2" type="462c0819:PsiDirectoryNode" />
-              <item name="parkspot2" type="462c0819:PsiDirectoryNode" />
-              <item name="additional_settings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parkspot2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parkspot2" type="462c0819:PsiDirectoryNode" />
-              <item name="ps2auth" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="NBKnowledgePane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -316,15 +283,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1376" height="877" extended-state="6" />
+    <frame x="1684" y="23" width="1217" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26461768" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37361702" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49850076" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49850076" weight="0.32866243" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -333,7 +300,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50149924" side_tool="true" weight="0.40382165" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49925038" weight="0.40382165" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49925038" visible="true" weight="0.40320855" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32866243" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -436,53 +403,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps2auth/rest_utils.py">
+    <entry file="file://$USER_HOME$/.virtualenvs/parkspot2/lib/python3.7/site-packages/rest_framework/response.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <marker date="1565813982444" expanded="true" signature="874:876" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps2auth/backends.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding>
-            <marker date="1565710947122" expanded="true" signature="282:287" ph="..." />
-          </folding>
-        </state>
+        <state relative-caret-position="-1217" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parkspot2/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="644">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#310#319#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps2auth/models.py">
+    <entry file="file://$PROJECT_DIR$/ps2auth/backends.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        <state relative-caret-position="299">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps2auth/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1565710947122" expanded="true" signature="282:287" ph="..." />
           </folding>
         </state>
       </provider>
@@ -494,18 +435,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/parkspot2/lib/python3.7/site-packages/rest_framework/response.py">
+    <entry file="file://$PROJECT_DIR$/ps2auth/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1217" />
+        <state relative-caret-position="253">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps2auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps2auth/rest_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps2auth/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        <state relative-caret-position="405">
+          <caret line="90" column="37" lean-forward="true" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1565893650145" expanded="true" signature="3262:3265" ph="..." />
+            <marker date="1565972326845" expanded="true" signature="3263:3266" ph="..." />
           </folding>
         </state>
       </provider>

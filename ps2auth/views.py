@@ -49,6 +49,7 @@ def login(request):
             'token': 'Invalid credentials.'
         })
 
+
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
     permission_classes = [AllowAny]
