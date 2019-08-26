@@ -2,90 +2,65 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.contrib.auth import get_user_model
 from django.views.decorators.csrf import csrf_exempt
+from django.core.validators import validate_email
+from django.contrib.auth.hashers import check_password, make_password
 
 from rest_framework.response import Response
 from rest_framework.renderers import JSONRenderer
 from rest_framework.decorators import api_view, renderer_classes, permission_classes
 
-from .rest_utils import UserSerializer, IsAuthenticated, AllowAny, viewsets, generics, APIView, parsers
+from .rest_utils import IsAuthenticated, AllowAny, viewsets, generics, APIView, parsers
 from .models import PS2User, Token
 from ps2auth.backends import PS2AuthBackend
 
 import json
-from urllib.parse import unquote
 
-# Create your views here.
+# Create your VIEWS here.
 
-User = get_user_model()
-
-
-@csrf_exempt                        # CSRFs are more or less irrelevant for mobile clients
-@api_view(['POST'])                 # A login endpoint needs credentials, so only POST is allowed
-@renderer_classes([JSONRenderer])   # Without the renderer class Response does not know how to render the data
-@permission_classes([AllowAny])     # A user that wants to log in can't be authenticated
+@csrf_exempt
+@api_view(["POST"])
+@permission_classes((AllowAny,))
 def login(request):
-    # request.body is a byte stream, that's why we have to decode it to utf-8
-    data = json.loads(request.body.decode('utf-8'))
-    ps2auth = PS2AuthBackend()
-    # ps2auth returns the user obj if authentication is successful
-    user = ps2auth.authenticate(data['mail'], data['password'])
-    if user is not None:
-        # Create token for user
-        token, created = Token.objects.get_or_create(user=user)
-        if created is False:
-            # If the user already has a token delete it and establish a new one
-            Token.objects.filter(user=user).delete()
-            token, create = Token.objects.get_or_create(user=user)
-        # Render the response, it takes the renderer_class from the decorator and creates a json.
-        # The client should take the user_id for reference and save the token for authentication.
-        # This token will be added to every request from the client.
-        return Response({
-            'token': token.key,
-            'user_id': user.pk,
-            'email': user.email
-        })
-    else:
-        return Response({
-            'token': 'Invalid credentials.'
-        })
-
-
-# ViewSets define the view behavior.
-class UserViewSet(viewsets.ModelViewSet):
-    permission_classes = [AllowAny]
-    queryset = PS2User.objects.all()
-    serializer_class = UserSerializer
-
-    def list(self, request, *args, **kwargs):
-        if request.user.is_staff:
-            queryset = PS2User.objects.all()
-            serializer = UserSerializer(queryset, many=True, context={'request': request})
-            return Response(serializer.data)
-        else:
-            # If not admin only return the authenticated user.
-            return self.retrieve(request, get_self=True)
-
-    def retrieve(self, request, *args, **kwargs):
-        if kwargs['get_self'] is True:
-            queryset = PS2User.objects.get(pk=request.user.pk)
-            serializer = UserSerializer(queryset, many=False, context={'request': request})
-            return Response(serializer.data)
-        pass
-
-    def update(self, request, *args, **kwargs):
-        pass
-
-    def partial_update(self, request, *args, **kwargs):
-        pass
-
-    def destroy(self, request, *args, **kwargs):
-        pass
+    print(request.META.get('HTTP_AUTHORIZATION'))
+    if request.META.get('HTTP_AUTHORIZATION'):
+        token = request.META.get('HTTP_AUTHORIZATION').split(' ')[1]
+        print(Token.objects.get(key=token))
+        user = PS2AuthBackend.authenticate(request, email=None, password=None, token=token)
+        token, _ = Token.objects.get_or_create(user=user)
+        return Response({'token': token.key},
+                        status=200)
+    json.loads(request.body.decode('utf-8'))
+    email, password = request.data['mail'], request.data['password']
+    if email is None or password is None:
+        return Response({'error': 'Please provide both username and password'},
+                        status=400)
+    user = PS2User.objects.get(email=email)
+    print(get_user_model())
+    print(user)
+    print(user.password)
+    print(check_password(password, user.password))
+    if not user:
+        return Response({'error': 'Invalid Credentials'},
+                        status=404)
+    if check_password(password, user.password):
+        token, _ = Token.objects.get_or_create(user=user)
+        return Response({'token': token.key},
+                        status=200)
 
 
 @csrf_exempt
-class UserCreateView(APIView):
-    model = get_user_model()
-    permission_classes = [
-        AllowAny  # Or anon users can't register
-    ]
-    serializer_class = UserSerializer
+@api_view(["POST"])
+@permission_classes((AllowAny,))
+def register(request):
+    json.loads(request.body.decode('utf-8'))
+    email, password = request.data['mail'], request.data['password']
+    if email is None or password is None:
+        return Response({'error': 'Please provide both username and password'},
+                        status=400)
+    user = PS2AuthBackend.test_authenticate(request, email=email, password=password)
+    if not user:
+        return Response({'error': 'Invalid Credentials'},
+                        status=404)
+    token, _ = Token.objects.get_or_create(user=user)
+    return Response({'token': token.key},
+                    status=200)

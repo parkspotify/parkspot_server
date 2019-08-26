@@ -41,7 +41,7 @@ class PS2User(AbstractBaseUser):
 
     objects = PS2UserManager()
 
-    email = models.EmailField(_('email adress'), unique=True)
+    email = models.EmailField(_('email adress'), unique=True, max_length=128)
     display_name = models.CharField(_('display name'), max_length=30, blank=True)
     date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
 

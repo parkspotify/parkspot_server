@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Additional settings import
-from .additional_settings.rest import REST_FRAMEWORK
+from .additional_settings import REST_FRAMEWORK, LOGGING
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,7 +28,7 @@ SECRET_KEY = 'go7%1u5yp=xqj&__fxkmipn30@qta8(6^vwzl+nuc9-lw=mn&7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.0.242", "192.168.1.101", "0.0.0.0" , ]
+ALLOWED_HOSTS = ["192.168.0.242", "192.168.1.101", "0.0.0.0" , "127.0.0.1"]
 
 
 # Application definition
@@ -50,10 +50,11 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # this middleware short circuits the stack and forwards the requests for login and registration (needed for CSRF-TOKEN exemption)
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -93,7 +94,7 @@ DATABASES = {
 
 # AUTHENTICATION SETTINGS
 AUTH_USER_MODEL = 'ps2auth.PS2User'
-AUTHENTICATION_BACKENDS = ('ps2auth.backends.PS2AuthBackend', 'django.contrib.auth.backends.ModelBackend',)
+AUTHENTICATION_BACKENDS = ('ps2auth.backends.PS2AuthBackend')
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
