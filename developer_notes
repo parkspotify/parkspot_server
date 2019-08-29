@@ -19,6 +19,9 @@
     Was für PostGre + PostGis spricht ist die Convenience-Integration und die Beliebtheit/Support vom
     GeoDjango-Paket.
 
+    Update: Wir entschieden uns aus Zeitmangel die postgre-Anbindung trotz Geolocation-Spezialisierung nicht aufzubauen.
+            Dies kann eventuell nächstes Semester nochmal angegangen werden.
+
 03.06.2019: (started at 8:15. Worked until: 11:30)
 
     Implementation of the Rest-Framework was done with some generic viewsets. The endpoints in the urls can

@@ -44,9 +44,11 @@ INSTALLED_APPS = [
     # 3rd party apps
     'rest_framework',
     'rest_framework.authtoken',
+    'django_extensions',
 
     # Custom modules and apps inside this project
     'ps2auth',
+    'ps2api',
 ]
 
 MIDDLEWARE = [

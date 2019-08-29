@@ -28,7 +28,8 @@ def login(request):
         user = PS2AuthBackend.authenticate(request, email=None, password=None, token=token)
         token, _ = Token.objects.get_or_create(user=user)
         return Response({'token': token.key},
-                        status=200)
+            status=200
+        )
     json.loads(request.body.decode('utf-8'))
     email, password = request.data['mail'], request.data['password']
     if email is None or password is None:
@@ -57,7 +58,7 @@ def register(request):
     if email is None or password is None:
         return Response({'error': 'Please provide both username and password'},
                         status=400)
-    user = PS2AuthBackend.test_authenticate(request, email=email, password=password)
+    user = PS2AuthBackend.authenticate(request, email=email, password=password)
     if not user:
         return Response({'error': 'Invalid Credentials'},
                         status=404)
