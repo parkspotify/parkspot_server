@@ -45,19 +45,3 @@ class PS2AuthBackend(object):
             logging.getLogger("stdout_logger").debug("User with USER_ID {} does not exist.".format(email))
             return None
 
-    def test_authenticate(self, email, password):
-        try:
-            user, created = PS2User.objects.get_or_create(email=email)
-            if created:
-                user.set_password(raw_password=password)
-                return user
-            elif not created and check_password(password=password, encoded=user.password):
-                return user.check_password(password)
-            else:
-                return None
-        except PS2User.DoesNotExist:
-            logging.getLogger(__name__).debug("User with login {} does not exist.".format(email))
-            return "UserDoesNotExit"
-        except Exception as e:
-            logging.getLogger("stdout_logger").debug(repr(e))
-            return repr(e)

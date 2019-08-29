@@ -10,6 +10,7 @@ from rest_framework.permissions import IsAdminUser
 
 # Create your views here.
 
+
 class RaspberryViewSet(viewsets.GenericViewSet,  # generic view functionality
                      mixins.CreateModelMixin,  # handles POSTs
                      mixins.RetrieveModelMixin,  # handles GETs for 1 Company
